@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Driver
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=array1\ array2\ length
+comment2.target=float\ calculateSimilarity(char[],\ char[],\ int)
+comment2.text=\n\ Calculates\ the\ similarity\ between\ two\ char\ arrays.\n\ @param\ array1\ The\ first\ character\ array.\n\ @param\ array2\ The\ second\ character\ array.\n\ @param\ length\ The\ length\ up\ to\ which\ to\ compare\ the\ arrays.\n\ @return\ The\ percentage\ of\ similarity\ as\ a\ float.\n
+comment3.params=similarityScores
+comment3.target=float\ calculateAverageSimilarity(java.util.ArrayList)
+comment3.text=\n\ Calculates\ the\ average\ of\ all\ similarity\ scores\ in\ the\ list.\n\ @param\ similarityScores\ The\ list\ of\ similarity\ scores.\n\ @return\ The\ average\ similarity\ percentage.\n
+numComments=4

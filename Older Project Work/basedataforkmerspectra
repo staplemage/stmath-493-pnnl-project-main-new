@@ -1,0 +1,33 @@
+#this file is a .py file which will take in the input of sequence and output the K-mer spectrum base data. 
+import matplotlib.pyplot as plt
+from Bio import SeqIO
+def k_mer_frequency(seq, k):
+    L: int = len(seq)
+    frequencies = {}
+    # iterate over the number of k-mers in seq
+    for n in range(L - k + 1):
+        kmer: str = seq[n:n+k]
+        frequencies[kmer] = frequencies.get(kmer, 0) + 1
+    # Count how many times each frequency occurs
+    frequency_counts = {}
+    for frequency in frequencies.values():
+        frequency_counts[frequency] = frequency_counts.get(frequency, 0) + 1
+    return frequency_counts
+
+#next lines code use Biopython library and SeqIO method to get the sequence from the source file and then plots the file
+
+with open("/Users/sony/Downloads/GCF_902375395.1_MGYG-HGUT-01475_genomic.fna") as handle:
+    for record in SeqIO.parse(handle, "fasta"):
+        print(record.seq)
+sequence: str = record.seq
+k_value = 8
+result = k_mer_frequency(sequence, k_value)
+x = list(result.keys())
+y = list(result.values())
+
+plt.scatter(x, y)
+plt.xlabel('Frequency')
+plt.ylabel('Repetition')
+plt.title('Frequency vs Repetition of k-mers')
+plt.show()
+    
