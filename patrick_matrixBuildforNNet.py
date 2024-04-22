@@ -8,8 +8,8 @@ import numpy as np
 twomers = ["AT", "AC", "AG", "AA", "TA", "TC", "TG", "TT", "CA", "CT", "CG", "CC", "GA", "GT", "GC", "GG"]
 
 def main():
-    winDir = "C:\\Users\\patri\\Downloads\\PNNL data\\pseudomonas\\training data"
-    linDir = "/home/nprince/Downloads/_From Purvine, Emilie/pseudomonas"
+    winDir = "C:\\Users\\patri\\Downloads\\PNNL data\\escherichia\\training data"
+    linDir = "/home/nprince/Downloads/_From Purvine, Emilie/escherichia"
     
     fullFiles = []
     for root, dirs, files in os.walk(winDir):
