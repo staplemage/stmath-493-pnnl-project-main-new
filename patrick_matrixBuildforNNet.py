@@ -8,10 +8,11 @@ import numpy as np
 twomers = ["AT", "AC", "AG", "AA", "TA", "TC", "TG", "TT", "CA", "CT", "CG", "CC", "GA", "GT", "GC", "GG"]
 
 def main():
-    winDir = "C:\\Users\\patri\\Downloads\\PNNL data\\escherichia\\training data"
+    winDir = "C:\\Users\\patri\\Downloads\\PNNL data\\Streptococcus\\training data"
     linDir = "/home/nprince/Downloads/_From Purvine, Emilie/escherichia"
     
     fullFiles = []
+    strainLengths = []
     for root, dirs, files in os.walk(winDir):
         for file in files:
             if file.endswith(".fna"):
