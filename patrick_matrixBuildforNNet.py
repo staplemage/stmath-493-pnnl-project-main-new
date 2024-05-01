@@ -8,7 +8,7 @@ import numpy as np
 twomers = ["AT", "AC", "AG", "AA", "TA", "TC", "TG", "TT", "CA", "CT", "CG", "CC", "GA", "GT", "GC", "GG"]
 
 def main():
-    winDir = "C:\\Users\\patri\\Downloads\\PNNL data\\Streptococcus\\training data"
+    winDir = "C:\\Users\\patri\\Downloads\\PNNL data\\Bacillus\\testing data"
     linDir = "/home/nprince/Downloads/_From Purvine, Emilie/escherichia"
     
     fullFiles = []
