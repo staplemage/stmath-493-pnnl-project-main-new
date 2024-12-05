@@ -5,7 +5,7 @@ import pathlib
 import pickle
 import numpy as np
 
-twomers = ["AT", "AC", "AG", "AA", "TA", "TC", "TG", "TT", "CA", "CT", "CG", "CC", "GA", "GT", "GC", "GG"]
+monomers = ["A", "T", "C", "G"]
 
 def main():
     winDir = "C:\\Users\\patri\\Downloads\\PNNL data\\Bacillus\\testing data"
@@ -37,14 +37,20 @@ def main():
                 sequence = []
                 sequence = hold
                 count += 128
-            if seq[i:i+2] in twomers:
-                checker = seq[i:i+2]
-                sequence.append(twomers.index(checker))
+            if seq[i] in monomers and seq[i+1] in monomers:
+                checker = seq[i:i+3]
+                # print(checker)
+                sequence.append(checker)
                 count += 1
+            
+            # if seq[i:i+2] in twomers:
+            #     checker = seq[i:i+2]
+            #     sequence.append(twomers.index(checker))
+            #     count += 1
         
 
     # print(str(bigList))
-    f = open("bigListofSeq.txt", "wb") # look into numpy, writeto, readfrom
+    f = open("bigListofSeq3mer.txt", "wb") # look into numpy, writeto, readfrom
     pickle.dump(bigList, f)
     print("Done")
     f.close()
